@@ -38,9 +38,9 @@ httpServer.listen(8080, () => {
 //     console.log('Client disconnected1');
 //   });
 // });
-let port = 8081;
+// let port = 8081;
 
-let IO = require("socket.io")(port, {
+let IO = require("socket.io")(httpServer, {
   cors: {
     origin: "*",
     methods: ["GET", "POST"],
